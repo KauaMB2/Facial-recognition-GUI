@@ -1,6 +1,7 @@
 import cv2 as cv
 import os
 import sys
+from FancyDrawn import FancyDrawn
 
 if len(sys.argv) < 2:
     print("Usage: python reconhecimentoFacial.py <image_path>")
@@ -44,7 +45,8 @@ for (x, y, w, h) in facesRect:
         cv.rectangle(img, (x, y - text_height - 10), (x + text_width, y), (0, 0, 0), -1)
         cv.putText(img, text, (x, y - 5), cv.FONT_HERSHEY_COMPLEX, 0.9, (0, 255, 0), thickness=2)
         cv.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), thickness=4)
-        fancyDraw(img, (x, y, w, h))
+        fancydrawn=FancyDrawn(img)
+        img=fancydrawn.draw((x, y, w, h))
 
 cv.imshow('Detected Face', img)
 cv.waitKey(0)
