@@ -22,3 +22,5 @@ class FancyDrawn:
         cv.line(self.__frame, (x1, y1), (x1 - l, y1), (0, 255, 0), t)
         cv.line(self.__frame, (x1, y1), (x1, y1 - l), (0, 255, 0), t)
         return self.__frame
+
+    

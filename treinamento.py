@@ -2,10 +2,6 @@ import cv2 as cv
 import os
 import numpy as np
 
-
-
-
-
 class Treinamento():
     def __init__(self):
         # Get the list of self.__people (directories) in the 'fotos' folder
@@ -55,3 +51,7 @@ class Treinamento():
         # Save the self.__features and self.__labels arrays
         np.save(os.path.join(self.__DIR, './features.npy'), self.__features)
         np.save(os.path.join(self.__DIR, './labels.npy'), self.__labels)
+
+if __name__ == "__main__":
+    treinamento=Treinamento()
+    treinamento.createTrain()

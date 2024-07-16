@@ -2,6 +2,7 @@ import cv2 as cv
 import os
 import sys
 from FancyDrawn import FancyDrawn
+from tkinter import filedialog
 
 
 class ReconhecimentoFacial():
@@ -28,3 +29,9 @@ class ReconhecimentoFacial():
         cv.imshow('Detected Face', self.__img)
         cv.waitKey(0)
         cv.destroyAllWindows()
+
+if __name__ == "__main__":
+    file_path=input("Informe o diretório da foto: ")
+    if file_path:
+        reconhecimento=ReconhecimentoFacial(file_path)
+        reconhecimento.reconhecer()

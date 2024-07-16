@@ -45,3 +45,7 @@ class Camera():
             cv.imshow("Camera", frame)
 
         cv.destroyAllWindows()
+
+if __name__ == "__main__":
+    cadastrarFace=Camera()
+    cadastrarFace.reconhecer()

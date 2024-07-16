@@ -53,7 +53,7 @@ class CadastrarFace():
         cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    nomeUsuario = input("Digite o nome do funcionário: ")
+    nomeUsuario = input("Digite o nome do usuário: ")
     if nomeUsuario:
         cadastrarFace=CadastrarFace(nomeUsuario)
         cadastrarFace.TirarFotos(nomeUsuario)
