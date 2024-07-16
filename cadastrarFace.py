@@ -56,4 +56,4 @@ if __name__ == "__main__":
     nomeUsuario = input("Digite o nome do usuário: ")
     if nomeUsuario:
         cadastrarFace=CadastrarFace(nomeUsuario)
-        cadastrarFace.TirarFotos(nomeUsuario)
+        cadastrarFace.TirarFotos()
