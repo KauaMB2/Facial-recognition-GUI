@@ -7,6 +7,8 @@ class FancyDrawn:
     def draw(self, bbox, l=30, t=10):
         x, y, w, h = bbox
         x1, y1 = x + w, y + h
+        #Rectangle
+        cv.rectangle(self.__frame, (x, y), (x + w, y + h), (0, 255, 0), thickness=4)# Draw the bounding box
         # Top Left
         cv.line(self.__frame, (x, y), (x + l, y), (0, 255, 0), t)
         cv.line(self.__frame, (x, y), (x, y + l), (0, 255, 0), t)
