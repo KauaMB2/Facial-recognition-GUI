@@ -1,8 +1,6 @@
 import cv2 as cv
 import os
-import sys
 from FancyDrawn import FancyDrawn
-from tkinter import filedialog
 
 
 class ReconhecimentoFacial():

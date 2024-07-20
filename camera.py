@@ -1,7 +1,6 @@
 import cv2 as cv
 import time
 import os
-import numpy as np
 from FancyDrawn import FancyDrawn
 
 class Camera():
